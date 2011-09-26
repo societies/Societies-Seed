@@ -1,0 +1,12 @@
+To run the bot, simply run 
+java -jar ElizaBot-bin.jar
+
+If you would like to change the parameters (or see the defaults), try with 
+java -jar ElizaBot-bin.jar -h
+
+Then simply add the user (by default socialblendeliza@jabber.org) to your 
+XMPP client, and talk to it. Endlessly. :)
+
+July 10th, 2011
+Miquel Martin
+contact@miquelmartin.org
