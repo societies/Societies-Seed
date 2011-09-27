@@ -1,9 +1,13 @@
-package org.socialblend.fortunecookies;
+package org.socialblend.fortunecookies.xc;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.xmpp.component.AbstractComponent;
 import org.xmpp.packet.Message;
 
-public class FortuneCookieXC extends AbstractComponent {
+public class FortuneCookieComponent extends AbstractComponent {
+	@SuppressWarnings("unused")
+	private Logger log = LoggerFactory.getLogger(this.getClass());
 
 	@Override
 	public String getDescription() {
@@ -17,14 +21,21 @@ public class FortuneCookieXC extends AbstractComponent {
 
 	@Override
 	protected void handleMessage(Message received) {
+		String cookie = Wisdom.getCookie();
+
 		// construct the response
 		Message response = new Message();
 		response.setFrom(jid);
 		response.setTo(received.getFrom());
-		response.setBody("Hello!");
+		response.setBody(cookie);
 
 		// send the response using AbstractComponent#send(Packet)
 		send(response);
+
+		// Report
+		System.out.println(received.getFrom() + " said: " + received.getBody()
+				+ ". I personally think that " + cookie);
+
 	}
 
 }

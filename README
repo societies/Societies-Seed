@@ -1,0 +1,9 @@
+Initial code to try out a Whack based external component and a Smack based client talking to each other.
+Note that, besides a running Openfire client, you'll need to have:
+- an external component shared secret of redman
+- a user called red with password red
+- your system must be able to resolve socialblend.local to the Openfire server
+
+Oh and, this should work with non-openfire, if someone could give it a shot
+
+Miquel
