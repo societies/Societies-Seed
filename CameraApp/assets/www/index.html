@@ -1,0 +1,106 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+	<title>Page Title</title> 
+	
+	<script type="text/javascript" charset="utf-8" src="phonegap-1.0.0.js"></script>
+	<link rel="stylesheet" href="jquery.mobile-1.0b3.css" /> 
+	<script type="text/javascript" src="jquery-1.6.1.js"></script> 
+	<script type="text/javascript" src="reference.js"></script>
+	<script type="text/javascript" src="jquery.mobile-1.0b3.js"></script>
+    <script type="text/javascript" src='strophe.js'></script>
+	
+	<!-- Weinre target insert -->
+	<!--script src="http://10.0.2.2:8081/target/target-script-min.js"></script-->
+	
+</head> 
+<body> 
+<!-- Start of first page -->
+
+
+
+
+<!-- Start of Camera page -->
+<div data-role="page" id="camera">
+
+	<div data-role="header">
+		<h1>Seed Camera App</h1>
+		<h1>Version 0.1</h1>
+	</div><!-- /header -->
+
+	<div data-role="content">	
+		<button id="cameraPictureURI">Capture Image URI</button>	
+		<button id="cameraPictureDisplay">Capture and Display Image</button>	
+		<img style="display:none;width:120px;height:120px;" id="smallImage" src="" />
+		<a href="#connection" data-transition="pop" data-role="button" id="connectionRef">Connection</a>
+		<!-- Attaching an onClick function to an anchor link via JQuery does not seem to work -->
+		<a href="#xmppConnection" data-transition="pop" data-role="button" id="xmppConnectionRef" onclick="xmppConnectionRef();">XMPP Connection</a>
+		
+	</div><!-- /content -->
+
+	<div data-role="footer">
+		<h4>SOCIETIES Seed</h4>
+	</div><!-- /footer -->
+</div><!-- /page -->
+
+<!-- Start of Connection page -->
+<div data-role="page" id="connection">
+
+	<div data-role="header">
+		<h1>Connection Functionality</h1>
+	</div><!-- /header -->
+
+	<div data-role="content">	
+		<button id="connectStatus">Network Connection Status</button>	
+		<button id="connectStatusListener">Create Connection Listener</button>	
+
+		<a href="#main" data-role="button" data-icon="back" data-inline="true">Back to main</a>
+	</div><!-- /content -->
+
+	<div data-role="footer">
+		<h4>SOCIETIES Seed</h4>
+	</div><!-- /footer -->
+</div><!-- /page -->
+
+<!-- Start of XMPP login page -->
+<div data-role="page" id="xmppConnection">
+
+	<div data-role="header">
+		<h1>XMPP Connection test</h1>
+	</div><!-- /header -->
+
+
+	<div data-role="content">	
+	    <div id='logXMPP'>
+	    </div>
+
+		<div id= "loginDialog">
+			<div data-role="fieldcontain">
+			    <label for="username">User JID: </label>
+			    <input type="text" name="userLogin" id="username" value=""  />
+			</div>
+	
+			<div data-role="fieldcontain">
+			    <label for="userpass">Password: </label>
+			    <input type="password" name="userpass" id="userpass" value=""  />
+			</div>
+	
+			<input id="connectXMPP" type="button" value="Connect" data-icon="gear" data-inline="true"/> 
+			
+		</div>
+		
+		<a href="#main" data-role="button" data-icon="back" data-inline="true">Back to main</a>
+		
+	</div><!-- /content -->
+
+	<div data-role="footer">
+		<h4>SOCIETIES Seed</h4>
+	</div><!-- /footer -->
+</div><!-- /page -->
+
+
+
+
+
+</body>
+</html>
