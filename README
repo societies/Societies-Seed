@@ -6,4 +6,22 @@ Note that, besides a running Openfire client, you'll need to have:
 
 Oh and, this should work with non-openfire, if someone could give it a shot
 
+
+Step-by-step instructions to get it running:
+============================================
+Prerequisites:
+- Install Openfire (That's what I've tried it with).
+- Go here http://localhost:9090/external-components-settings.jsp (or change server location, of course)
+- Ensure that you enabled External Components (the server ought to listen on port 5275).
+- Ensure the shared secret between XC and server is "redman" or change the XC code to whatever you want
+
+And now, with Openfire running, Just do this:
+- In eclipse, with all checked out, right click on the pom in Builder and run as maven package 
+
+- Right click on FortuneCookieXC and run as java application (Main class' called Main)
+- Same for FortuneCookieClient. Main class' FortuneCookieClient
+
+You should see output from both processes
+
 Miquel
+
