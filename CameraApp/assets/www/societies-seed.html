@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Societies Seed</title>
+	<meta name="author" content="Olivier Maridat (Trialog)" />
+	<script type="text/javascript" charset="utf-8" src="js/lib/phonegap.js"></script>
+	<!--[if IE]><script src="js/lib/html5-ie.js"></script><![endif]--> 
+	<link rel="stylesheet" type="text/css" href="css/jquery.mobile.css" />
+	<link rel="stylesheet" type="text/css" title="XMPP" href="css/style.css" />
+	<script type="text/javascript" src="js/lib/jquery.js"></script>
+	<script type="text/javascript" src="js/lib/jquery.mobile.js"></script>
+	<script type="text/javascript" src="js/lib/strophe.js"></script>	
+	<script type="text/javascript" src="js/shared.js"></script>
+	<script type="text/javascript" src="js/communityManager.js"></script>
+	<script type="text/javascript" src="js/societies-seed.js"></script>
+</head>
+<body>
+﻿
+<section data-role="page">
+
+	<header data-role="header" id="profil" data-position="inline">
+		<h1>Societies</h1>
+		<div id="feedback">Disconnected</div>
+		<div id="status"></div>
+		<a id="logout" class="ui-btn-right" data-icon="delete" data-role="button">Logout</a>
+	</header>
+	
+	<section data-role="collapsible" data-collapsed="false" id="page_connection">
+		<h1>Login</h1>
+		<div id="content" role="content" date-role="content">
+			<form id="login">
+				<div data-role="fieldcontain">
+					<label for="jid">JID</label>
+						<input type="text" name="jid" id="jid" tabindex="10" />
+				</div>
+				<div data-role="fieldcontain">
+					<label for="password">Password</label>
+						<input type="password" name="password" id="password" tabindex="20" />
+				</div>
+				<input type="button" id="connection" value="Login" data-inline="true" tabindex="30" />
+			</form>
+		</div>
+	</section>
+	
+	<section data-role="collapsible" id="page_myCommunities">
+		<h1>My communities</h1>
+		<div id="content" role="content" date-role="content">
+		TODO! We need here a database to store info about communities that I already joined.
+		<ul>
+			<li class="community"><a href="#">lion@socialblend.local</a></li>
+		</ul>
+		</div>
+	</section>
+	
+	<section data-role="collapsible" id="page_discoverCommunities">
+		<h1>Discover communities</h1>
+		<div id="content" role="content" date-role="content">
+		</div>
+	</section>
+	
+	<nav>
+		<a href="#main" data-role="button" data-icon="back" data-inline="true">Back to main</a>
+	</nav>
+</section>
+
+</body>
+</html>

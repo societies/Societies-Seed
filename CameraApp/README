@@ -1,0 +1,2 @@
+To use XMPP connection, you need to edit js/shared.js file :
+- BOSH_SERVICE with your XMPP server HTPP-BIND URL. The default value is the IP of your computer.

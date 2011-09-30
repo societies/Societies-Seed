@@ -2,14 +2,17 @@
 <html> 
 	<head> 
 	<title>Page Title</title> 
+	<script type="text/javascript" charset="utf-8" src="js/lib/phonegap.js"></script>
+	<link rel="stylesheet" href="css/jquery.mobile.css" /> 
+	<link rel="stylesheet" type="text/css" title="XMPP" href="css/style.css" />
+	<script type="text/javascript" src="js/lib/jquery.js"></script> 
+	<script type="text/javascript" src="js/lib/jquery.mobile.js"></script> 
+	<script type="text/javascript" src='js/lib/strophe.js'></script>
+	<script type="text/javascript" src="js/shared.js"></script>
 	
-	<script type="text/javascript" charset="utf-8" src="phonegap-1.0.0.js"></script>
-	<link rel="stylesheet" href="jquery.mobile-1.0b3.css" /> 
-	<script type="text/javascript" src="jquery-1.6.1.js"></script> 
-	<script type="text/javascript" src="reference.js"></script>
-	<script type="text/javascript" src="jquery.mobile-1.0b3.js"></script>
-    <script type="text/javascript" src='strophe.js'></script>
-	
+	<script type="text/javascript" src="js/reference.js"></script>
+	<script type="text/javascript" src="js/communityManager.js"></script>
+	<script type="text/javascript" src="js/societies-seed.js"></script>
 	<!-- Weinre target insert -->
 	<!--script src="http://10.0.2.2:8081/target/target-script-min.js"></script-->
 	
@@ -35,6 +38,7 @@
 		<a href="#connection" data-transition="pop" data-role="button" id="connectionRef">Connection</a>
 		<!-- Attaching an onClick function to an anchor link via JQuery does not seem to work -->
 		<a href="#xmppConnection" data-transition="pop" data-role="button" id="xmppConnectionRef" onclick="xmppConnectionRef();">XMPP Connection</a>
+		<a href="#coliseum" data-transition="pop" data-role="button" id="coliseumRef">Coliseum Scenario</a>
 		
 	</div><!-- /content -->
 
@@ -98,8 +102,54 @@
 	</div><!-- /footer -->
 </div><!-- /page -->
 
+<!-- Start of Calcisem Scenario page -->
+<section data-role="page" id="coliseum">
 
-
+	<header data-role="header" id="profil" data-position="inline">
+		<h1>Societies</h1>
+		<div id="feedback">Disconnected</div>
+		<div id="status"></div>
+		<a id="logout" class="ui-btn-right" data-icon="delete" data-role="button">Logout</a>
+	</header>
+	
+	<section data-role="collapsible" data-collapsed="false" id="page_connection">
+		<h1>Login</h1>
+		<div id="content" role="content" date-role="content">
+			<form>
+				<div data-role="fieldcontain">
+					<label for="loginConnectionJid">JID</label>
+						<input type="text" name="loginConnectionJid" id="loginConnectionJid" tabindex="10" />
+				</div>
+				<div data-role="fieldcontain">
+					<label for="loginConnectionPassword">Password</label>
+						<input type="password" name="loginConnectionPassword" id="loginConnectionPassword" tabindex="20" />
+				</div>
+				<input type="button" name="loginConnection" id="loginConnection" value="Login" data-inline="true" tabindex="30" />
+			</form>
+		</div>
+	</section>
+	
+	<section data-role="collapsible" id="page_myCommunities">
+		<h1>My communities</h1>
+		<div id="content" role="content" date-role="content">
+		TODO! We need here a database to store info about communities that I already joined.
+		<ul>
+			<li class="community"><a href="#">lion@socialblend.local</a></li>
+		</ul>
+		</div>
+	</section>
+	
+	<section data-role="collapsible" id="page_discoverCommunities">
+		<h1>Discover communities</h1>
+		<div id="content" role="content" date-role="content">
+		</div>
+	</section>
+	
+	<nav>
+		<a href="#main" data-role="button" data-icon="back" data-inline="true">Back to main</a>
+	</nav>
+</section>
+<!-- /page -->
 
 
 </body>
