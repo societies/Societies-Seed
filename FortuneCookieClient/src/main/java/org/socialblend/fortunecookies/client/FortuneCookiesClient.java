@@ -23,7 +23,7 @@ public class FortuneCookiesClient {
 
 	public static void main(String[] args) {
 		FortuneCookiesClient fcc = new FortuneCookiesClient("red",
-				"socialblend.local", "red", "home");
+				"red.local", "red", "home");
 
 		fcc.start();
 		try {
@@ -61,7 +61,7 @@ public class FortuneCookiesClient {
 								+ msg.getBody());
 					} else {
 						System.out.println(packet.getFrom()
-								+ " received and I'm... I'm just confused.");
+								+ " received and I'm... I'm just confused. Is the FortuneCookieXC running?");
 					}
 				}
 
@@ -71,7 +71,7 @@ public class FortuneCookiesClient {
 
 			// Send a message
 			Message msg = new Message(
-					"fortune@fortunecookies.socialblend.local",
+					"fortune@fortunecookies.red.local",
 					org.jivesoftware.smack.packet.Message.Type.normal);
 			msg.setBody("Good Morrow, Dear Sir!");
 			connection.sendPacket(msg);

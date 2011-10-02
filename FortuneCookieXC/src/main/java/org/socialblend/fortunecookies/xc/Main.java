@@ -16,12 +16,12 @@ public class Main {
 	public Main() {
 		org.xmpp.component.Component fortuneCookieComp = new FortuneCookieComponent();
 		ExternalComponentManager manager = new ExternalComponentManager(
-				"socialblend.local");
-		manager.setSecretKey("fortunecookies.socialblend.local", "redman");
+				"red.local");
+		manager.setSecretKey("fortunecookies.red.local", "password.red.local");
 
 		log.info("Connected!");
 		try {
-			manager.addComponent("fortunecookies.socialblend.local",
+			manager.addComponent("fortunecookies.red.local",
 					fortuneCookieComp);
 		} catch (ComponentException e) {
 			e.printStackTrace();
