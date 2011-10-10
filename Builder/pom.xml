@@ -49,5 +49,8 @@
 	<modules>
 		<module>../FortuneCookieXC</module>
 		<module>../FortuneCookieClient</module>
+		<module>../XMPP_DepBundle</module>
+		<module>../FortuneCookieClient_Virgo</module>
+		<module>../FortuneCookieXC_Virgo</module>	
 	</modules>
 </project>
