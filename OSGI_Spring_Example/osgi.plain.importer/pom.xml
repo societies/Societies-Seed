@@ -1,0 +1,82 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  
+	<parent>
+	    <groupId>osgi.spring.example</groupId>
+	  <artifactId>ExampleParent</artifactId>
+	    <version>0.0.1-SNAPSHOT</version>	   
+	   <relativePath>../ExampleParent</relativePath>
+	</parent>
+
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>osgi.spring.example</groupId>
+  <artifactId>osgi.plain.importer</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <description>osgi plain importer</description>
+  
+   <build>
+        <resources>
+            <!-- standard Maven folder -->
+            <resource>
+                <directory>src/main/resources</directory>
+            </resource>
+            <!-- plus root folder -->
+            <resource>
+                <directory>.</directory>
+                <includes>
+                    <include>plugin.xml</include>
+                    <include>META-INF/*</include>
+                </includes>
+            </resource>
+        </resources>
+        
+        <plugins>
+            <plugin>
+                <groupId>com.springsource.bundlor</groupId>
+                <artifactId>com.springsource.bundlor.maven</artifactId>
+                <version>1.0.0.M2</version>
+                <configuration>
+                    <outputManifest>/root/workspace/META-INF/MANIFEST.MF</outputManifest>
+                    <failOnWarnings>false</failOnWarnings>
+                    <removeNullHeaders>true</removeNullHeaders>
+                    <manifestHeaders><![CDATA[Bundle-ManifestVersion: 2
+Bundle-Name: osgi.plain.importer
+Bundle-ManifestVersion: 2
+Bundle-Description: osgi plain importer
+Bundle-SymbolicName: osgi.plain.importer
+Spring-DM-Version: ${pom.version}
+]]></manifestHeaders> 
+                </configuration>
+                <!-- generate the manifest automatically during packaging -->
+                <executions>
+                    <execution>
+                        <id>bundle-manifest</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>manifest</goal>
+                            <goal>transform</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+     </plugins>
+    </build>
+  
+  
+  <dependencies>
+    <dependency>
+      <groupId>org.osgi</groupId>
+      <artifactId>org.osgi.core</artifactId>
+      <version>4.2.0</version>
+    </dependency>
+    <dependency>
+    	<groupId>org.springframework</groupId>
+    	<artifactId>spring</artifactId>
+    	<version>2.5.6</version>
+    </dependency>
+    <dependency>
+    	<groupId>osgi.spring.example</groupId>
+    	<artifactId>osgi.plain.exporter</artifactId>
+    	<version>1.0.0</version>
+    </dependency>
+  </dependencies>
+</project>
