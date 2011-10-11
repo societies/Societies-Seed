@@ -2,18 +2,11 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>org.spring.osgi</groupId>
+    <artifactId>org.spring.osgi.exporter</artifactId>
     
-<parent>
-	<artifactId>Parent</artifactId>
-	<groupId>org.socialblend</groupId>
-	<version>0.0.1-SNAPSHOT</version>
-	<relativePath>../Parent</relativePath>
- </parent>
-
-	<modelVersion>4.0.0</modelVersion>
-    <groupId>org.socialblend</groupId>
-    <artifactId>FortuneCookieClient_Virgo</artifactId>
-    <name>FortuneCookieClient Virgo Bundle</name>
+    <name>spring osgi exporter</name>
     <version>1.0.0</version>
     <url>http://www.springframework.org/osgi</url>
 
@@ -25,22 +18,7 @@
     </properties>
 
     <dependencies>
-	
-	<!-- XMPP -->
-	<dependency>
-  		<groupId>org.igniterealtime.smack</groupId>
-  		<artifactId>smack</artifactId>
-  	</dependency>
-  	<dependency>
-  		<groupId>org.igniterealtime.smack</groupId>
-  		<artifactId>smackx</artifactId>
-  	</dependency>
-  	<dependency>
-  		<groupId>org.igniterealtime.smack</groupId>
-  		<artifactId>smackx-debug</artifactId>
-  	</dependency>
-  	
-  	<!-- Spring Stuff -->
+
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>org.springframework.beans</artifactId>
@@ -198,8 +176,8 @@
                     <failOnWarnings>false</failOnWarnings>
                     <removeNullHeaders>true</removeNullHeaders>
                     <manifestHeaders><![CDATA[Bundle-ManifestVersion: 2
-Bundle-Name: FoortuneCookiClient.Virgo
-Bundle-SymbolicName: FoortuneCookiClient.Virgo
+Bundle-Name: spring.osgi.exporter
+Bundle-SymbolicName: spring.osgi.exporter
 Spring-DM-Version: ${pom.version}
 ]]></manifestHeaders> 
                 </configuration>

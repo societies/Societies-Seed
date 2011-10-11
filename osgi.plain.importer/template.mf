@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Bundle-Version: 1.0.0
+Bundle-Name: osgi.plain.importer
+Bundle-ManifestVersion: 2
+Bundle-Description: osgi plain importer
+Bundle-SymbolicName: osgi.plain.importer
+Import-Package: org.osgi.framework,
+ osgi.plain.exporter.api;version="[1.0.0,1.1.0)"
+Bundle-Activator: osgi.plain.importer.ImporterActivator
+

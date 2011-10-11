@@ -1,0 +1,8 @@
+Excluded-Exports: 
+ *.internal*
+Unversioned-Imports: 
+ *
+Export-Package: org.spring.osgi.exporter.api; version="1.0.0"
+Bundle-SymbolicName: spring.osgi.exporter
+Bundle-ManifestVersion: 2
+Bundle-Version: 1.0.0

@@ -1,0 +1,23 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>OSGI_Spring_Example</groupId>
+	<artifactId>Example_Builder</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+
+	<parent>
+		<groupId>org.socialblend</groupId>
+		<artifactId>Parent</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+		<relativePath>../Parent</relativePath>
+	</parent>
+
+	<modules>
+		<module>osgi.plain.exporter</module>
+		<module>osgi.plain.importer</module>
+		<module>spring.osgi.exporter</module>
+		<module>spring.osgi.importer</module>
+			
+	</modules>
+</project>

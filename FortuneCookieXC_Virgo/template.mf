@@ -1,0 +1,7 @@
+Excluded-Exports: 
+ *.internal*
+Unversioned-Imports: 
+ *
+Bundle-SymbolicName: FortuneCookieXC.Virgo
+Bundle-ManifestVersion: 2
+Bundle-Version: 1.0.0

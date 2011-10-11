@@ -10,10 +10,11 @@
 	<relativePath>../Parent</relativePath>
  </parent>
 
-	<modelVersion>4.0.0</modelVersion>
+    <modelVersion>4.0.0</modelVersion>
     <groupId>org.socialblend</groupId>
-    <artifactId>FortuneCookieClient_Virgo</artifactId>
-    <name>FortuneCookieClient Virgo Bundle</name>
+    <artifactId>FortuneCookieXC_Virgo</artifactId>
+    
+    <name>FortuneCookieXC Virgo Bundle</name>
     <version>1.0.0</version>
     <url>http://www.springframework.org/osgi</url>
 
@@ -25,22 +26,17 @@
     </properties>
 
     <dependencies>
-	
-	<!-- XMPP -->
-	<dependency>
-  		<groupId>org.igniterealtime.smack</groupId>
-  		<artifactId>smack</artifactId>
-  	</dependency>
-  	<dependency>
-  		<groupId>org.igniterealtime.smack</groupId>
-  		<artifactId>smackx</artifactId>
-  	</dependency>
-  	<dependency>
-  		<groupId>org.igniterealtime.smack</groupId>
-  		<artifactId>smackx-debug</artifactId>
-  	</dependency>
-  	
-  	<!-- Spring Stuff -->
+		<!-- XMPP -->
+		<dependency>
+			<groupId>org.igniterealtime</groupId>
+			<artifactId>tinder</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.igniterealtime</groupId>
+			<artifactId>whack</artifactId>
+		</dependency>
+		
+		<!-- Spring stuff -->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>org.springframework.beans</artifactId>
@@ -198,8 +194,8 @@
                     <failOnWarnings>false</failOnWarnings>
                     <removeNullHeaders>true</removeNullHeaders>
                     <manifestHeaders><![CDATA[Bundle-ManifestVersion: 2
-Bundle-Name: FoortuneCookiClient.Virgo
-Bundle-SymbolicName: FoortuneCookiClient.Virgo
+Bundle-Name: FortuneCookieXC.Virgo
+Bundle-SymbolicName: FortuneCookieXC.Virgo
 Spring-DM-Version: ${pom.version}
 ]]></manifestHeaders> 
                 </configuration>
