@@ -1,4 +1,0 @@
-Manifest-Version: 1.0
-Bundle-Version: 1.0.0
-Bundle-Name: XMPP-DepBundle
-Bundle-ManifestVersion: 2

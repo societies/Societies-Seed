@@ -55,6 +55,7 @@ public class FortuneCookiesClient {
 			PacketListener listener = new PacketListener() {
 
 				public void processPacket(Packet packet) {
+					
 					if (packet instanceof Message) {
 						Message msg = (Message) packet;
 						System.out.println(msg.getFrom() + " says: "
@@ -64,7 +65,6 @@ public class FortuneCookiesClient {
 								+ " received and I'm... I'm just confused. Is the FortuneCookieXC running?");
 					}
 				}
-
 			};
 
 			connection.addPacketListener(listener, null);
@@ -73,6 +73,7 @@ public class FortuneCookiesClient {
 			Message msg = new Message(
 					"fortune@fortunecookies.red.local",
 					org.jivesoftware.smack.packet.Message.Type.normal);
+			
 			msg.setBody("Good Morrow, Dear Sir!");
 			connection.sendPacket(msg);
 

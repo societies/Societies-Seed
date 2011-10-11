@@ -19,7 +19,7 @@ public class Main {
 				"red.local");
 		manager.setSecretKey("fortunecookies.red.local", "password.red.local");
 
-		log.info("Connected!");
+		log.info("Connected!");	
 		try {
 			manager.addComponent("fortunecookies.red.local",
 					fortuneCookieComp);
