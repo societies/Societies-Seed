@@ -22,7 +22,7 @@
 				<extensions>true</extensions>
 				<configuration>
     				<instructions>
-    					<Bundle-Activator>osgi.plain.exporter.impl.ExporterActivator</Bundle-Activator>
+    					<Bundle-Activator>org.dummy.pkg.XMPPDependecyActivator</Bundle-Activator>
     					<Import-Package>
     						org.osgi.framework,
     						!com.sun.*,	
