@@ -1,0 +1,1 @@
+Communication Framework implemetation using XMPP XC as a Virgo bundle.

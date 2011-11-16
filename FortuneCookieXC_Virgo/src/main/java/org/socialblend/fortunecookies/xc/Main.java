@@ -18,13 +18,16 @@ public class Main {
 		System.out.println(" *** fortunecookies.xc bean started ***");
 		
 		org.xmpp.component.Component fortuneCookieComp = new FortuneCookieComponent();
+//		ExternalComponentManager manager = new ExternalComponentManager(
+//				"red.local");
+//		manager.setSecretKey("fortunecookies.red.local", "password.red.local");
 		ExternalComponentManager manager = new ExternalComponentManager(
-				"red.local");
-		manager.setSecretKey("fortunecookies.red.local", "password.red.local");
-
+		"jmgoncalv.es");
+		manager.setSecretKey("xc.jmgoncalv.es", "nightmare");
+		
 		log.info("Connected!");	
 		try {
-			manager.addComponent("fortunecookies.red.local",
+			manager.addComponent("xc.jmgoncalv.es",
 					fortuneCookieComp);
 		} catch (ComponentException e) {
 			e.printStackTrace();
