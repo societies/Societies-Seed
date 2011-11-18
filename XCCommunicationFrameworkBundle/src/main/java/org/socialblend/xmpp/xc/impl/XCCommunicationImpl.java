@@ -123,7 +123,7 @@ public class XCCommunicationImpl extends AbstractComponent implements XCCommunic
 		log.info("register "+nsExt.getNamespace());
 		try {
 			extensions.put(nsExt.getNamespace(),nsExt);
-			JAXBContext jc = JAXBContext.newInstance();
+			JAXBContext jc = JAXBContext.newInstance(nsExt.getPackage());
 			unmarshallers.put(nsExt.getNamespace(), jc.createUnmarshaller());
 			Marshaller mr = jc.createMarshaller();
 			
@@ -150,10 +150,15 @@ public class XCCommunicationImpl extends AbstractComponent implements XCCommunic
 
 	@Override
 	protected IQ handleIQGet(IQ iq) throws Exception {
+		log.info("handleIQGet");
 		Element any = (Element) iq.getElement().elements().get(0); // according to the schema in RCF3921 IQs only have one element, unless they have an error
-		NamespaceExtension nsExtension = extensions.get(any.getNamespace().toString());
-		Unmarshaller u = unmarshallers.get(any.getNamespace().toString());
-		log.info("handleIQGet xmlns="+any.getNamespace().toString()+" ext="+nsExtension.toString()+" u="+u.toString()); // TODO ISTO NÃO IMPRIME UM CARALHO!
+		NamespaceExtension nsExtension = extensions.get(any.getNamespace().getURI());
+		Unmarshaller u = unmarshallers.get(any.getNamespace().getURI());
+		
+		log.info("extensions.size()="+extensions.size()+"; unmarshallers.size()="+unmarshallers.size());
+		log.info("extensionsKey:"+extensions.keySet().iterator().next()+"; unmarshallersKey:"+unmarshallers.keySet().iterator().next());
+		log.info("extensionsContains:"+extensions.containsKey(any.getNamespace().getURI())+"; unmarshallersContains:"+unmarshallers.containsKey(any.getNamespace().getURI()));
+		log.info("handleIQGet xmlns="+any.getNamespace().getURI()+" ext="+nsExtension+" u="+u);
 		IQ returnIq = null;
 		if (extensions!=null && u!=null) {
 			// TODO DISCLAIMER: this jaxb-dom4j conversion code is VERY BAD but i have to rush this; the propper solution would be to rewrite whack

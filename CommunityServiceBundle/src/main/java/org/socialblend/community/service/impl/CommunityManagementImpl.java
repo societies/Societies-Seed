@@ -48,9 +48,11 @@ public class CommunityManagementImpl implements CommunityManagement, NamespaceEx
 	
 	@Autowired
 	public CommunityManagementImpl(XCCommunication xc) {
+		participants = new HashSet<String>();
+		leaders = new HashSet<String>();
 		this.xc = xc;
 		try {
-			xc.register(this);
+			xc.register(this); // TODO unregister??
 		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

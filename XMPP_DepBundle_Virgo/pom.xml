@@ -49,7 +49,9 @@
 		           			org.jivesoftware.whack.*,
 		           			org.jivesoftware.smack.*,
 		           			org.dom4j*,
-		           			javax.xml*
+		           			javax.xml*,
+		           			com.sun.xml.bind*,
+		           			org.socialblend.community
 		           		</Export-Package>
 		           		<Embed-Dependency>*;scope=compile|runtime</Embed-Dependency>
 						<Embed-Transitive>true</Embed-Transitive>
@@ -108,6 +110,13 @@
   		<type>jar</type>
   		<scope>compile</scope>
   	</dependency>
+  	
+  	<dependency>
+		<groupId>org.socialblend.community</groupId>
+		<artifactId>community-xep</artifactId>
+		<version>0.0.1</version>
+		<scope>compile</scope>
+	</dependency>
   	
   	<dependency>
 		<groupId>org.slf4j</groupId>
