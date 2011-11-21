@@ -1,5 +1,11 @@
 /**
- * Copyright (c) 2011, SOCIETIES Consortium
+ * Copyright (c) 2011, SOCIETIES Consortium (WATERFORD INSTITUTE OF TECHNOLOGY (TSSG), HERIOT-WATT UNIVERSITY (HWU), SOLUTA.NET 
+ * (SN), GERMAN AEROSPACE CENTRE (Deutsches Zentrum fuer Luft- und Raumfahrt e.V.) (DLR), Zavod za varnostne tehnologije
+ * informacijske družbe in elektronsko poslovanje (SETCCE), INSTITUTE OF COMMUNICATION AND COMPUTER SYSTEMS (ICCS), LAKE
+ * COMMUNICATIONS (LAKE), INTEL PERFORMANCE LEARNING SOLUTIONS LTD (INTEL), PORTUGAL TELECOM INOVAÇÃO, SA (PTIN), IBM ISRAEL
+ * SCIENCE AND TECHNOLOGY LTD (IBM), INSTITUT TELECOM (ITSUD), AMITEC DIACHYTI EFYIA PLIROFORIKI KAI EPIKINONIES ETERIA
+ * PERIORISMENIS EFTHINIS (AMITEC), TELECOM ITALIA S.p.a.(TI),  TRIALOG (TRIALOG), Stiftelsen SINTEF (SINTEF), NEC EUROPE LTD
+ * (NEC))
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following
@@ -19,7 +25,16 @@
  */
 
 /**
- * @author jmgoncalves
+ * @author Joao M. Goncalves (PTIN)
+ * 
+ * This is the interface of the service exposed by this OSGi bundle. It defines methods that allow other bundles to send and 
+ * register for the receipt of XMPP messages. This service handles the connection, parsing and routing of messages, allowing 
+ * individual bundles to focus on the specific logic.
+ * Each registered bundle must be able to address some namespace. After a bundle registrers with the 
+ * XCCommunicationFrameworkBundle claiming some namespace, the XCCommunicationFrameworkBundle will automatically adjust its
+ * Service Discovery (XEP-0030) responses, in order to include that namespace.
+ * Although it is called "XC" (from external component), the interface is arguably suited to be implemented as an XMPP client.
+ * 
  */
 
 package org.socialblend.xmpp.xc;
