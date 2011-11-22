@@ -48,9 +48,13 @@
 
 	<modules>
 		<module>../FortuneCookieXC</module>
-		<module>../FortuneCookieClient</module>
-		<module>../XMPP_DepBundle_Virgo</module>
+		<module>../FortuneCookieClient</module>		
 		<module>../FortuneCookieXC_Virgo</module>
 		<module>../FortuneCookieClient_Virgo</module>
+		<module>../CommunityXEP</module>
+		<module>../XMPP_DepBundle_Virgo</module>
+		<module>../XCCommunicationFrameworkBundle</module>
+		<module>../CommunityServiceBundle</module>		
 	</modules>
+	
 </project>
