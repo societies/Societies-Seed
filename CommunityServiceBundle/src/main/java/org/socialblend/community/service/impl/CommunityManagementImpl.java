@@ -50,6 +50,8 @@ import org.springframework.stereotype.Component;
 import org.xmpp.packet.IQ;
 import org.xmpp.packet.Message;
 
+// TODO
+// no distinction between get and set... join and leave should be set and who should be get
 @Component
 public class CommunityManagementImpl implements CommunityManagement, NamespaceExtension {
 
