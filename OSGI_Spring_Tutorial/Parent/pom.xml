@@ -9,7 +9,7 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<virgo.rich.deploy.dir>${env.VIRGO_HOME}/pickup</virgo.rich.deploy.dir>		
+		<virgo.rich.deploy.dir>${env.VIRGO_HOME}\pickup</virgo.rich.deploy.dir>
 	</properties>
 
 	<dependencies>
@@ -99,6 +99,65 @@
 					<artifactId>maven-bundle-plugin</artifactId>
 					<version>2.3.5</version>
 				</plugin>
+
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-dependency-plugin</artifactId>
+					<executions>
+						<!-- Used to copy the generated artifact to the container defined by VIRGO_HOME-->
+						<execution>
+							<id>copy</id>
+							<phase>install</phase>
+							<goals>
+								<goal>copy</goal>
+							</goals>
+							<configuration>
+								<stripVersion>true</stripVersion>
+							</configuration>
+						</execution>
+						<!-- Used to analyze the dependencies of the project. Will print warnings 
+							during verify phase,directly before install phase -->
+						<execution>
+							<id>analyze</id>
+							<phase>verify</phase>
+							<goals>
+								<goal>analyze-only</goal>
+							</goals>
+							<configuration>
+								<failOnWarning>false</failOnWarning>
+							</configuration>
+						</execution>						
+					</executions>
+				</plugin>
+				
+				 
+            <!--This plugin's configuration is used to store Eclipse 
+                m2e settings only. It has no influence on the Maven build itself. -->
+            <plugin>
+                <groupId>org.eclipse.m2e</groupId>
+                <artifactId>lifecycle-mapping</artifactId>
+                <version>1.0.0</version>
+                <configuration>
+                    <lifecycleMappingMetadata>
+                        <pluginExecutions>
+                            <pluginExecution>
+                                <pluginExecutionFilter>
+                                    <groupId>org.codehaus.mojo</groupId>
+                                    <artifactId>aspectj-maven-plugin</artifactId>
+                                    <versionRange>[1.0,)</versionRange>
+                                    <goals>
+                                        <goal>test-compile</goal>
+                                        <goal>compile</goal>
+                                    </goals>
+                                </pluginExecutionFilter>
+                                <action>
+                                    <execute />
+                                </action>
+                            </pluginExecution>
+                        </pluginExecutions>
+                    </lifecycleMappingMetadata>
+                </configuration>
+            </plugin>
 			</plugins>
 
 		</pluginManagement>
@@ -161,18 +220,17 @@
 	</repositories>
 	<!-- Defines from where we get our plugin tools ie. tools used during the 
 		build -->
-	<pluginRepositories>
-		<pluginRepository>
-			<id>maven-repo</id>
-			<name>maven repo</name>
-			<url>http://repo1.maven.org/maven2/</url>
-		</pluginRepository>
-
-		<!-- Spring tools -->
-		<pluginRepository>
-			<id>com.springsource.repository.bundles.milestone</id>
-			<name>SpringSource Enterprise Bundle Repository - SpringSource Milestone Releases</name>
-			<url>http://repository.springsource.com/maven/bundles/milestone</url>
-		</pluginRepository>
-	</pluginRepositories>
+	 <pluginRepositories>
+        <pluginRepository>
+            <id>maven-repo</id>
+            <name>maven repo</name>
+            <url>http://repo1.maven.org/maven2/</url>
+        </pluginRepository>
+        <pluginRepository>
+            <id>com.springsource.repository.bundles.milestone</id>
+            <name>SpringSource Enterprise Bundle Repository - SpringSource Milestone Releases</name>
+            <url>http://repository.springsource.com/maven/bundles/milestone</url>
+        </pluginRepository>
+    </pluginRepositories>
+	
 </project>

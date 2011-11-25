@@ -1,0 +1,9 @@
+Excluded-Exports: 
+ *.internal*
+Unversioned-Imports: 
+ *
+Bundle-ManifestVersion: 2
+Bundle-Name: tutorial.cal.user
+Bundle-SymbolicName: tutorial.cal.user
+Import-Package: org.societies.tutorial.cal.service.api
+Bundle-Version: 1.0.0

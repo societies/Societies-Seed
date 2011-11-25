@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Export-Package: org.societies.tutorial.cal.user.impl;version="1.0.0";u
+ ses:="javax.annotation,org.springframework.beans.factory.annotation,o
+ rg.springframework.stereotype"
+Bundle-Vendor: SpringSource Inc.
+Bundle-Version: 1.0.0
+Tool: Bundlor 1.1.0.BUILD-20101220120024
+Bundle-Name: tutorial.cal.user
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: tutorial.cal.user
+Import-Package: javax.annotation,org.societies.tutorial.cal.service.ap
+ i,org.springframework.beans.factory.annotation,org.springframework.st
+ ereotype
+

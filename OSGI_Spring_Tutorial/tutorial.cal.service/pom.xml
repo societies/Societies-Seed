@@ -3,7 +3,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
 	<modelVersion>4.0.0</modelVersion>
-	<artifactId>CalculatorService</artifactId>
+	<artifactId>tutorial.cal.service</artifactId>
 	<packaging>bundle</packaging>
 	<name>Calculator Service Bundle</name>
 	<url>http://www.springframework.org/osgi</url>
@@ -162,7 +162,7 @@
 				<extensions>true</extensions>
 				<configuration>
 					<instructions>
-						<Export-Package>org.societies.calculatorservice.api.*</Export-Package>
+						<Export-Package>org.societies.tutorial.cal.service.api.*</Export-Package>
 						<Bundle-Activator></Bundle-Activator>
 						<Import-Package></Import-Package>
 						<!-- 
