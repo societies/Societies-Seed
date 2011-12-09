@@ -1,16 +1,14 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-	
-	<parent>
-	<artifactId>Parent</artifactId>
-	<groupId>org.socialblend</groupId>
-	<version>0.0.1-SNAPSHOT</version>
-	<relativePath>../Parent</relativePath>
- </parent>
+
+	<!-- <parent> <artifactId>Parent</artifactId> <groupId>org.socialblend</groupId> 
+		<version>0.0.1-SNAPSHOT</version> <relativePath>../Parent</relativePath> 
+		</parent> -->
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>XmppXmlRpc</groupId>
 	<artifactId>XmppXmlRpc</artifactId>
 	<name>XML XMPP  RPC</name>
+	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 	<description>XML XMPP  RPC mock example</description>
 	<dependencies>
@@ -22,11 +20,17 @@
 		<dependency>
 			<groupId>org.igniterealtime.smack</groupId>
 			<artifactId>smack</artifactId>
-			</dependency>
+			<version>3.2.1</version>
+				<type>jar</type>
+				<scope>compile</scope>
+		</dependency>
 		<dependency>
 			<groupId>org.igniterealtime.smack</groupId>
 			<artifactId>smackx-debug</artifactId>
-			</dependency>
+			<version>3.2.1</version>
+				<type>jar</type>
+				<scope>compile</scope>
+		</dependency>
 		<dependency>
 			<groupId>org.igniterealtime.smack</groupId>
 			<artifactId>smackx-jingle</artifactId>
@@ -35,7 +39,10 @@
 		<dependency>
 			<groupId>org.igniterealtime.smack</groupId>
 			<artifactId>smackx</artifactId>
-			</dependency>
+			<version>3.2.1</version>
+				<type>jar</type>
+				<scope>compile</scope>
+		</dependency>
 		<dependency>
 			<groupId>org.apache.ws.commons.util</groupId>
 			<artifactId>ws-commons-util</artifactId>
@@ -46,13 +53,13 @@
 			<artifactId>xmlrpc-client</artifactId>
 			<version>3.1.1</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>org.apache.xmlrpc</groupId>
 			<artifactId>xmlrpc-common</artifactId>
-			<version>3.1.1</version>
+			<version>3.1.3</version>
 		</dependency>
-	
+
 		<dependency>
 			<groupId>org.apache.xmlrpc</groupId>
 			<artifactId>xmlrpc-server</artifactId>
