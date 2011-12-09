@@ -22,13 +22,11 @@
 		<dependency>
 			<groupId>org.igniterealtime.smack</groupId>
 			<artifactId>smack</artifactId>
-			<version>3.2.1</version>
-		</dependency>
+			</dependency>
 		<dependency>
 			<groupId>org.igniterealtime.smack</groupId>
 			<artifactId>smackx-debug</artifactId>
-			<version>3.2.1</version>
-		</dependency>
+			</dependency>
 		<dependency>
 			<groupId>org.igniterealtime.smack</groupId>
 			<artifactId>smackx-jingle</artifactId>
@@ -37,8 +35,7 @@
 		<dependency>
 			<groupId>org.igniterealtime.smack</groupId>
 			<artifactId>smackx</artifactId>
-			<version>3.1.0</version>
-		</dependency>
+			</dependency>
 		<dependency>
 			<groupId>org.apache.ws.commons.util</groupId>
 			<artifactId>ws-commons-util</artifactId>
