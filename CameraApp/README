@@ -1,4 +1,4 @@
-Required Configurations
+Required Configurations To Use CameraApp
 -------
 To use XMPP connection, you need:
 * to enable "BOSH Clients With Limited Access to Connect to the Server" in the Openfire Administration 
